@@ -1,0 +1,26 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#faf9f6;font-family:'Inter',sans-serif;color:#1a1a1a;padding:16px;max-width:640px;margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-top:8px}
+.logo{font-family:'Fraunces',serif;font-size:32px;font-weight:700;letter-spacing:-1px}
+.live{font-size:10px;letter-spacing:1px;background:#111;color:white;padding:7px 12px;border-radius:20px;text-decoration:none}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:18px}
+.stat{background:white;border-radius:18px;padding:14px;border:1px solid #eee;text-align:center}
+.stat b{display:block;font-family:'Fraunces',serif;font-size:22px}
+.stat span{font-size:10px;color:#999;text-transform:uppercase}
+#search{width:100%;padding:14px 16px;border-radius:16px;border:1px solid #eee;margin-bottom:18px;font-size:14px}
+.grid{display:grid;gap:14px}
+.card{background:white;border-radius:24px;padding:18px;border:1px solid #ececec;box-shadow:0 2px 12px rgba(0,0,0,.04);display:flex;justify-content:space-between;align-items:center;animation:pop .25s ease}
+@keyframes pop{from{transform:scale(.96);opacity:0}to{transform:scale(1);opacity:1}}
+.card h3{font-family:'Fraunces',serif;font-size:18px}
+.card small{color:#aaa;font-size:11px;font-family:monospace}
+.badge{font-size:10px;font-weight:600;padding:6px 10px;border-radius:20px}
+.dispo{background:#e7f9ec;color:#15803d}
+.emprunte{background:#fde8e8;color:#b91c1c}
+#empty{text-align:center;margin-top:80px;color:#aaa;line-height:1.6}
+.login-card{max-width:380px;margin:80px auto;background:white;padding:30px;border-radius:24px;border:1px solid #eee;text-align:center}
+.login-card input{width:100%;padding:12px;margin:10px 0;border-radius:12px;border:1px solid #ddd}
+.login-card button{width:100%;padding:12px;border-radius:12px;border:0;background:#111;color:white}
+.admin-form{background:white;padding:18px;border-radius:18px;display:grid;gap:10px;margin-bottom:20px;border:1px solid #eee}
+.admin-form input{padding:12px;border-radius:12px;border:1px solid #ddd}
+.admin-form button{padding:12px;border-radius:12px;border:0;background:#111;color:white}
+.admin-card button{padding:6px 10px;border-radius:10px;border:1px solid #ddd;background:white;font-size:11px;margin-left:6px}
