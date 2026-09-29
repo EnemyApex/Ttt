@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin RFIDlib</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="lock">
+  <div class="login-card">
+    <h1>Admin</h1>
+    <p>Code PIN pour gérer la bibliothèque</p>
+    <input id="pin" type="password" placeholder="Code PIN">
+    <button onclick="unlock()">Entrer</button>
+    <small>PIN par défaut: admin123</small>
+  </div>
+</div>
+
+<div id="admin-content" style="display:none">
+<header><div class="logo">RFIDlib. ADMIN</div><a href="/">Voir site user</a></header>
+
+<div class="admin-form">
+  <h3>Ajouter / Modifier un livre</h3>
+  <input id="uid" placeholder="UID du tag (ex: A3F5B2C1)">
+  <input id="title" placeholder="Titre réel du livre">
+  <input id="author" placeholder="Auteur">
+  <button onclick="saveBook()">Enregistrer</button>
+</div>
+
+<div id="books" class="grid"></div>
+</div>
+
+<script>
+const PIN_CODE = "overflow"; // CHANGE TON PIN ICI
+function unlock(){
+ if(document.getElementById('pin').value===PIN_CODE){
+  document.getElementById('lock').style.display='none';
+  document.getElementById('admin-content').style.display='block';
+  localStorage.setItem('rfid_admin','ok'); loadAdmin();
+ }else alert('Mauvais PIN');
+}
+if(localStorage.getItem('rfid_admin')==='ok'){
+ document.getElementById('lock').style.display='none';
+ document.getElementById('admin-content').style.display='block';
+}
+</script>
+<script src="admin.js"></script>
+</body>
+</html>
